@@ -265,7 +265,7 @@ section {
 .header .logo h1 {
 	font-size: 24px;
 	font-weight: 700;
-	color: #000000;
+	color: #fdfdfd;
 	margin-bottom: 0;
 	font-family: var(--font-primary);
 }
@@ -443,7 +443,7 @@ section {
 		inset: 0;
 		padding: 50px 0 10px 0;
 		margin: 0;
-		background: rgba(0, 0, 0, 0.8);
+		background: rgba(249, 249, 249, 0.8);
 		overflow-y: auto;
 		transition: 0.3s;
 		z-index: 9998;
@@ -1098,7 +1098,7 @@ section {
 .alt-services .img-bg {
 	background-size: cover;
 	background-position: center center;
-	min-height: 400px;
+	min-height: 200px;
 }
 
 .alt-services h3 {
@@ -1148,7 +1148,7 @@ section {
 
 .alt-services .icon-box h4 {
 	font-weight: 700;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 	font-size: 18px;
 }
 
