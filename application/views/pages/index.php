@@ -52,11 +52,11 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row justify-content-around gy-3">
-          <div class="col-lg-6 img-bg" style="background-image: url(https://res.cloudinary.com/dnmtsuwhc/image/upload/v1681099329/WhatsApp_Image_2023-04-10_at_9.46.13_AM_1_uvsuop.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
+          <div class="col-lg-5  img-bg"  style="background-image: url(https://res.cloudinary.com/dnmtsuwhc/image/upload/v1681099329/WhatsApp_Image_2023-04-10_at_9.46.13_AM_1_uvsuop.jpg); height: 700px" data-aos="zoom-in" data-aos-delay="100"></div>
 
           <div class="col-lg-5 d-flex flex-column justify-content-center">
             
-            <p>Attorney Thinley Yuden holds a degree of B. Com LL.B from the North Bengal University (Indian Institute of Legal Studies). She graduated in the year 2019 and did her Post Graduate Diploma in National Law from Royal Institute of Management, Bhutan in the year of 2020 and passed the prestigious Bar Council Examination of Bhutan in the year of 2021. She received awards for the Academic Excellence in her degree of Law School (1st, 2nd, 3rd, 4th and 5th year). She also served as the College Representative from the year of 2016 till 2017. She is a Certified practitioner in the Dispute Resolution and Mediation Skills and also a member of the Bar Council Committee of Bhutan, the Jabmi Tshogdey. Prior to operating her Law Firm, she interned at the Garuda Legal Consultancy, a renowned Law Firm in Bhutan, assisting and researching on the Commercial Laws of Bhutan such as:</p>
+            <p>Attorney Thinley Yuden holds a degree of B. Com LL.B from the North Bengal University (Indian Institute of Legal Studies). She graduated in the year 2019 and did her Post Graduate Diploma in National Law from Royal Institute of Management, Bhutan in the year of 2020 and passed the prestigious Bar Council Examination of Bhutan in the year of 2021. She received awards for the Academic Excellence in her degree of Law School (1st, 2nd, 3rd, 4th and 5th year). She also served as the College Representative from the year of 2016 till 2017. She is a Certified practitioner in the Dispute Resolution and Mediation Skills and also a member of the Bar Council Committee of Bhutan, the Jabmi Tshogdey. I have the expertise in:</p>
 
             <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
               
@@ -94,6 +94,12 @@
             </div><!-- End Icon Box --><div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
               <div>
                 <h4><a href="" class="stretched-link">Foreign Direct Investment (FDI)</a></h4>
+              </div>
+            </div>
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              
+              <div>
+                <h4><a href="" class="stretched-link">Banking Laws</a></h4>
               </div>
             </div><!-- End Icon Box -->
           </div>
