@@ -56,52 +56,45 @@
 
           <div class="col-lg-5 d-flex flex-column justify-content-center">
             
-            <p>Attorney Thinley Yuden holds a degree of B. Com LL.B from the North Bengal University (Indian Institute of Legal Studies). She graduated in the year 2019 and did her Post Graduate Diploma in National Law from Royal Institute of Management, Bhutan in the year of 2020 and passed the prestigious Bar Council Examination of Bhutan in the year of 2021. She received awards for the Academic Excellence in her degree of Law School (1st, 2nd, 3rd, 4th and 5th year). She also served as the College Representative from the year of 2016 till 2017. She is a Certified practitioner in the Dispute Resolution and Mediation Skills and also a member of the Bar Council Committee of Bhutan, the Jabmi Tshogdey. I have the expertise in:</p>
+            <p>Attorney Thinley Yuden holds a degree of B. Com LL.B from the North Bengal University (Indian Institute of Legal Studies). She graduated in the year 2019 and did her Post Graduate Diploma in National Law from Royal Institute of Management, Bhutan in the year of 2020 and passed the prestigious Bar Council Examination of Bhutan in the year of 2021. She received awards for the Academic Excellence in her degree of Law School (1st, 2nd, 3rd, 4th and 5th year). She also served as the College Representative from the year of 2016 till 2017. She is a Certified practitioner in the Dispute Resolution and Mediation Skills and also a member of the Bar Council Committee of Bhutan, the Jabmi Tshogdey. She has the expertise in:</p>
 
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+              <ul>
+
+              <li>   <h4><a href="" class="stretched-link " style="color:black">Intellectual Property Rights</a></h4></li>
+              <li>  <h4><a href="" class="stretched-link" style="color:black">Contract Act</a></h4></li>
+              <li> <h4><a href="" class="stretched-link" style="color:black">FinTech</a></h4></li>
+              <li><h4><a href="" class="stretched-link" style="color:black">Securities Exchange</a></h4></li>
+              <li><h4><a href="" class="stretched-link" style="color:black">Bankruptcy</a></h4></li>
+              <li><h4><a href="" class="stretched-link" style="color:black">Foreign Direct Investment (FDI)</a></h4></li>
+              <li> <h4><a href="" class="stretched-link" style="color:black">Banking Laws</a></h4></li>
+              </ul>
               
-              <div>
-                <h4><a href="" class="stretched-link">Intellectual Property Rights</a></h4>
-               
-              </div>
-            </div><!-- End Icon Box -->
-
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
              
-              <div>
-                <h4><a href="" class="stretched-link">Contract Act</a></h4>
-              </div>
-            </div><!-- End Icon Box -->
+               
+          
+       
 
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+          
               
-              <div>
-                <h4><a href="" class="stretched-link">FinTech</a></h4>
-              </div>
-            </div><!-- End Icon Box -->
+         
 
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+           
+               
+            
+
+          
+                
+            
+		
+                
+             
+                
+             
               
-              <div>
-                <h4><a href="" class="stretched-link">Securities Exchange</a></h4>
-              </div>
-            </div>
-			<div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
-              
-              <div>
-                <h4><a href="" class="stretched-link">Bankruptcy</a></h4>
-              </div>
-            </div><!-- End Icon Box --><div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
-              <div>
-                <h4><a href="" class="stretched-link">Foreign Direct Investment (FDI)</a></h4>
-              </div>
-            </div>
-            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
-              
-              <div>
-                <h4><a href="" class="stretched-link">Banking Laws</a></h4>
-              </div>
-            </div><!-- End Icon Box -->
+            
+               
+             
+           
           </div>
         </div>
 

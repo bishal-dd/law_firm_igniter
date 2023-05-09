@@ -5,6 +5,9 @@ class Pages extends CI_Controller {
 
 	public function index()
 	{
+		$result = $this->slider_model->get_slider();
+
+	
 		$this->load->view('pages/index');
 	}
 	
