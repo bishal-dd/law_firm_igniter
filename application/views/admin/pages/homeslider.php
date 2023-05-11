@@ -1,191 +1,118 @@
-<section class="content-header">
-  <h1>
-      Home Slider Management
-  </h1>
-</section>
-<section class="content">
-      <?php  
-        if($message!='Undefined' && $message!=''){
-      ?>
-      <div class="row" id="messageId">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-la-12">
-                  <h5 style="text-align: center;"><?=$message?></h5>
-              </div>
-          </div>
-      <?php
-      } if($messagefail!='Undefined' && $messagefail!=''){
-      ?>
-      <div class="row" id="messageId">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-la-12">
-                  <h5 style="text-align: center;"><?=$messagefail?></h5>
-              </div>
-          </div>
-      <?php
-      }
-      ?>
-  <div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="box box-primary">
-        <div class="box-header with-border">
-          <h3 class="box-title">Create New Home Slider</h3>
-          <span><button class="btn btn-success fa-pull-right" onclick="addinfo()" type="button"><i class="fa fa-plus"></i> Add Home Slider</button></span>
-        </div>
-        <div class="box-body">
-          <table id="example1" class="table table-bordered table-striped">
-            <thead>
-            <tr>
-              <th>No.</th>
-              <th>Slider Name</th>
-              <th>Image</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach($t_slider as $i=> $event): ?>
-            <tr>
-              <td><?=$i+1?></td>
-              <td><?php echo $event['Name'];?></td>
-              <td><img style="width: 100px; height: 100px;" src="<?php echo $event['Image'];?>"></td>
-              <td>
-                <?php if($event['Status']=="Active"){ ?><span class="label label-success"><?php echo $event['Status'];?></span>
-                      <?php } else{?>   
-                          <span class="label label-danger"><?php echo $event['Status'];?></span>
-                      <?php }?>
+<?php $this->load->view('admin/head.php') ?>
+<?php $this->load->view("admin/header.php") ?>
+<!--End topbar header-->
+<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
 
-              </td>
-              <td>
-                <button type="button" class="btn btn-block btn-danger"onclick="deleteslider(<?php echo $event['Id'];?>)"><i class="fa fa-times"></i>Delete</button> 
-              </td>
-              </tr>
-              <?php endforeach;?>
-            </tbody>
-          </table>
+    <div class="row mt-3 justify-content-center">
+      <div class="col-lg-6">
+         <div class="card">
+           <div class="card-body">
+           <div class="card-title">Add Event</div>
+           <hr>
+            <form>
+           <div class="form-group">
+            <label for="input-1">Name</label>
+            <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name">
+           </div>
+           <div class="form-group">
+            <label for="input-2">Image</label>
+            <input type="file" class="form-control" id="input-2" placeholder="Choose your Image" required>
+           </div>
+           
+          
+           <div class="form-group">
+            <label for="input-5">Description</label><br>
+            <textarea cols="50" rows="5" required></textarea>
+           </div>
+          
+           </div>
+           <div class="form-group text-center">
+            <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Add</button>
+          </div>
+          </form>
+         </div>
+         </div>
+      </div>
+
+    
+    </div><!--End Row-->
+
+	<!--start overlay-->
+		  <div class="overlay toggle-menu"></div>
+		<!--end overlay-->
+
+    </div>
+    <!-- End container-fluid-->
+    
+   </div><!--End content-wrapper-->
+   <!--Start Back To Top Button-->
+    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+	
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2018 Dashtreme Admin
         </div>
       </div>
+    </footer>
+	<!--End footer-->
+	
+	<!--start color switcher-->
+   <div class="right-sidebar">
+    <div class="switcher-icon">
+      <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
     </div>
-  </div>
-</section>
-<div class="modal modal-default" id="addslider">
-    <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header" style="background: green;">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title"><span id="medelheaderspan"></span></h4>
-          </div>
-          <?php echo form_open('#' , array('class' => 'form-horizontal validatable','id'=>'addformId', 'enctype' => 'multipart/form-data'));?>
-          <div class="modal-body">
-              <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="form-group">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <label>Name:<span class="text-danger">*</span></label>
-                            <input type="text" id="Name" onclick="remove_err('Name_err')" name="Name" class="form-control">
-                            <span id="Name_err" class="text-danger"></span>
-                        </div>
-                        
-                      </div>
-                    <div class="form-group">
-                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                          <label>Images</label>
-                             <label>Upload Slider Images:<span class="text-danger">*</span></label><span style="color: red;"><i>(Image Size:780*480)</i></span>
-                            <input type="file" id="images" onchange="checkfilesize(this,'images','Image_err','addBtn')" onclick="remove_err('Image_err')" name="Image" class="form-control">
-                            <span id="Image_err" class="text-danger"></span>
-                        </div>
-                    </div>
-                    
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="addsliderinfo()">Save changes</button>
-              </div>
-            </div>
-            </form>
-        </div>
-    </div>
-</div>
+    <div class="right-sidebar-content">
 
-<script type="text/javascript">
-  setTimeout(function(){
-      $('#messageId').hide();
-  }, 5000);
- $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
-      'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
-      'ordering'    : true,
-      'info'        : true,
-      'autoWidth'   : false
-    })
-  })
- function addinfo(){
-    $('#actiontype').val('add');
-    $('#medelheaderspan').html('Add Home Slider');
-    $('#btnspan').html('<i class="fa fa-save"></i> Add Home Slider');
-    $('#addslider').modal('show');
-  }
-function addsliderinfo(){
-  if(validateaddform()){
-  $.blockUI
-      ({ 
-        css: 
-        { 
-            border: 'none', 
-            padding: '15px', 
-            backgroundColor: '#000', 
-            '-webkit-border-radius': '10px', 
-            '-moz-border-radius': '10px', 
-            opacity: .5, 
-            color: '#fff' 
-        } 
-      });
-      var url='<?php echo base_url();?>index.php?adminController/Addslider';
-      var options = {target: '#mainContentdiv',url:url,type:'POST',data: $("#addformId").serialize()}; 
-      $("#addformId").ajaxSubmit(options);
-      setTimeout($.unblockUI, 600); 
-      $('#addslider').modal('hide');
-}
-}
-  function validateaddform(){
-    var retrtype=true;
-    if($('#Name').val()==""){
-      $('#Name_err').html('Please Enter Name.');
-      retrtype=false;
-    }
-    return retrtype;
-  }
-   function editinfo(Editid,email,name,phone,rol,tatus){
-      $('#EditId').val(Editid);
-      $('#Name1').val(name);
-      $('#Email1').val(email);
-      $('#Phone1').val(phone);
-      $('#role1').val(rol);
-      $('#status').val(tatus);
-      $('#actiontype').val('add');
-      $('#modalheader1').html('Edit Users');
-      $('#EditusersDetails').modal('show');
-    }
-    function deleteslider(id){
-      $.blockUI
-          ({ 
-            css: 
-            { 
-                  border: 'none', 
-                  padding: '15px', 
-                  backgroundColor: '#000', 
-                  '-webkit-border-radius': '10px', 
-                  '-moz-border-radius': '10px', 
-                  opacity: .5, 
-                  color: '#fff' 
-            } 
-          });
-        var url='<?php echo base_url();?>index.php?adminController/DeleteSlider/'+id+'/slider';
-         $("#mainContentdiv").load(url);
-         setTimeout($.unblockUI, 1000);
-    }
-  </script>
+      <p class="mb-0">Gaussion Texture</p>
+      <hr>
+      
+      <ul class="switcher">
+        <li id="theme1"></li>
+        <li id="theme2"></li>
+        <li id="theme3"></li>
+        <li id="theme4"></li>
+        <li id="theme5"></li>
+        <li id="theme6"></li>
+      </ul>
+
+      <p class="mb-0">Gradient Background</p>
+      <hr>
+      
+      <ul class="switcher">
+        <li id="theme7"></li>
+        <li id="theme8"></li>
+        <li id="theme9"></li>
+        <li id="theme10"></li>
+        <li id="theme11"></li>
+        <li id="theme12"></li>
+		<li id="theme13"></li>
+        <li id="theme14"></li>
+        <li id="theme15"></li>
+      </ul>
+      
+     </div>
+   </div>
+  <!--end color switcher-->
    
+  </div><!--End wrapper-->
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+	
+ <!-- simplebar js -->
+  <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+  <!-- sidebar-menu js -->
+  <script src="assets/js/sidebar-menu.js"></script>
+  
+  <!-- Custom scripts -->
+  <script src="assets/js/app-script.js"></script>
+	
