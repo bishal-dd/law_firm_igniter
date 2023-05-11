@@ -1,13 +1,27 @@
 <?php
       $this->load->view('static/head.php');
   ?>
+  <?php
+      $this->load->view('static/navbar.php');
+  ?>
 
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('https://ishr.ch/wp-content/uploads/2021/12/law_flickr_3.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-<section class="vh-100" style="background-color: #9A616D;">
+        <h2>About</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>About</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+<section class="vh-100" >
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
-        <div class="card" style="border-radius: 1rem;">
+        <div class="card" style="border-radius: 1rem; background-color:grey">
           <div class="row g-0 justify-content-center">
             
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
