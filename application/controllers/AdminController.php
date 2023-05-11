@@ -36,7 +36,7 @@ class AdminController extends CI_Controller {
 	
 
 		$this->common_model->add_events_model($data);
-		redirect('admincontroller/load_add_events');
+		redirect('AdminController/load_add_events');
 
 	}
 
@@ -59,7 +59,7 @@ class AdminController extends CI_Controller {
 				'Date'=> $current_date);
 
 		$this->common_model->add_silder_image($data);
-		redirect('admincontroller/load_add_events');
+		redirect('AdminController/load_add_events');
 
 	}
 

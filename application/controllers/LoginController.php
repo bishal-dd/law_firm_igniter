@@ -20,13 +20,13 @@ class LoginController extends CI_Controller {
             );
         
             $this->session->set_userdata($user_data);
-            redirect('admincontroller/index');
+            redirect('AdminController/index');
         }
     }
 
     function logout(){
         $this->session->unset_userdata(0);
         $this->session->sess_destroy();
-        redirect('pages/index', 'refresh');
+        redirect('Pages/index', 'refresh');
     }
 }

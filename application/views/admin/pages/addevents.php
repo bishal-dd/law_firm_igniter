@@ -12,7 +12,7 @@
            <div class="card-body">
            <div class="card-title">Add Event</div>
            <hr>
-            <form action="<?php echo site_url('admincontroller/add_events'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?php echo site_url('AdminController/add_events'); ?>" method="post" enctype="multipart/form-data">
            <div class="form-group">
             <label for="input-1">Name</label>
             <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name" value="<?= set_value('name') ?>" name="name" required>
@@ -41,7 +41,7 @@
            <div class="card-body">
            <div class="card-title">Add Slider Image</div>
            <hr>
-            <form action="<?php echo site_url('admincontroller/add_slider'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?php echo site_url('AdminController/add_slider'); ?>" method="post" enctype="multipart/form-data">
           
            <div class="form-group">
             <label for="input-2">Image</label>

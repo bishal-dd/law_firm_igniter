@@ -27,7 +27,7 @@
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
              
-                <form method="post" action="<?php echo site_url('logincontroller/login'); ?>" enctype="multipart/form-data">
+                <form method="post" action="<?php echo site_url('LoginController/login'); ?>" enctype="multipart/form-data">
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                     
