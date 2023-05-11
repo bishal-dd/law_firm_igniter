@@ -26,6 +26,24 @@ class Common_model extends CI_Model {
         return $query->result();
 
     }
+
+    function get_users($email, $password){
+
+        $this->db->where('Email', $email); // corrected arrow operator "->" to comma ","
+        $this->db->where('Password', hash('sha256', $password)); // changed SHA2 to hash('sha256')
+
+        $query = $this->db->get('t_user');
+
+        if($query->num_rows() == 1){
+            return $query->row(0)->Id;
+        }
+        else{
+            return false;
+        }
+
+       
+
+    }
 }
 
 
