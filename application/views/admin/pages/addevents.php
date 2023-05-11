@@ -15,7 +15,7 @@
             <form action="<?php echo site_url('admincontroller/add_events'); ?>" method="post" enctype="multipart/form-data">
            <div class="form-group">
             <label for="input-1">Name</label>
-            <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name" value="<?= set_value('name') ?>" name="name">
+            <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name" value="<?= set_value('name') ?>" name="name" required>
            </div>
            <div class="form-group">
             <label for="input-2">Image</label>

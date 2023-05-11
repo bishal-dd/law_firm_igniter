@@ -41,7 +41,7 @@
                         <td><?php echo $event->Name;?></td>
                         <td><img src="<?php echo base_url();?>/<?php echo $event->Image;?>" class="product-img" alt="product img" style="width:100%; height:auto"></td>
                         <td><?php echo $event->Description?></td>
-                        <td>03 Aug 2017</td>
+                        <td><?php echo $event->Date?></td>
                         <td><button class="btn btn-success">Edit </button> <button class="btn btn-danger">Delete</button></td>
                       </tr>
                     <?php endforeach; ?>
