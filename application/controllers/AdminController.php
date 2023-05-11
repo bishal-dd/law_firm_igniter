@@ -23,10 +23,12 @@ class AdminController extends CI_Controller {
 			move_uploaded_file($_FILES["image"]["tmp_name"], $file_directory . $image);
 		}
 	
+		$current_date = date('Y-m-d'); // generates a string representing the current date in the format YYYY-MM-DD
 
 		$data = array('Name' => $this->input->post('name'),
 		'Description' => $this->input->post('description'),
-			'Image' => $file_directory . $image);
+			'Image' => $file_directory . $image,
+				'Date'=> $current_date);
 
 	
 

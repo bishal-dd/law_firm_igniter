@@ -29,13 +29,13 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4 posts-list">
-        <?php foreach($events as $i=>$event): ?>
+        <?php foreach(array_reverse($events) as $i=>$event): ?>
           <div class="col-xl-4 col-md-6">
             <div class="post-item position-relative h-100">
 
               <div class="post-img position-relative overflow-hidden">
                 <img src="<?php echo base_url();?>/<?php echo $event->Image;?>" class="img-fluid" alt="">
-                <span class="post-date">December 12</span>
+                <span class="post-date"><?php echo $event->Date?></span>
               </div>
 
               <div class="post-content d-flex flex-column">
