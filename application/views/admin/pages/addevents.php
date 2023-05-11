@@ -12,20 +12,20 @@
            <div class="card-body">
            <div class="card-title">Add Event</div>
            <hr>
-            <form>
+            <form action="<?php echo site_url('admincontroller/add_events'); ?>" method="post">
            <div class="form-group">
             <label for="input-1">Name</label>
-            <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name">
+            <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name" value="<?= set_value('name') ?>" name="name">
            </div>
            <div class="form-group">
             <label for="input-2">Image</label>
-            <input type="file" class="form-control" id="input-2" placeholder="Choose your Image" required>
+            <input type="file" class="form-control" id="input-2" placeholder="Choose your Image" name="image" vlaue="<?= set_value('image')?>"required>
            </div>
            
           
            <div class="form-group">
             <label for="input-5">Description</label><br>
-            <textarea cols="50" rows="5" required></textarea>
+            <textarea cols="50" rows="5" name="description" value="<?= set_value('description')?>" required></textarea>
            </div>
           
            </div>
