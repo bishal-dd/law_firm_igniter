@@ -5,8 +5,9 @@ class AdminController extends CI_Controller {
 
 	public function index()
 	{
+		$data['events'] = $this->common_model->get_events();
 
-		$this->load->view('admin/dashboard');
+		$this->load->view('admin/dashboard', $data);
 	}
 	
 	function add_events(){
@@ -42,4 +43,6 @@ class AdminController extends CI_Controller {
 
 		$this->load->view("admin/pages/addevents");
 	}
+
+	
 }

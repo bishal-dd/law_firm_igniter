@@ -35,13 +35,16 @@
                      <th>Actions</th>
                    </tr>
                    </thead>
-                   <tbody><tr>
-                    <td>Iphone 5</td>
-                    <td><img src="https://via.placeholder.com/110x110" class="product-img" alt="product img"></td>
-                    <td>#9405822</td>
-                    <td>03 Aug 2017</td>
-					<td><button class="btn btn-success">Edit </button> <button class="btn btn-danger">Delete</button></td>
-                   </tr>
+                   <tbody>
+                   <?php foreach($events as $i=>$event): ?>
+                      <tr>
+                        <td><?php echo $event->Name;?></td>
+                        <td><img src="<?php echo base_url();?>/<?php echo $event->Image;?>" class="product-img" alt="product img" style="width:100%; height:auto"></td>
+                        <td><?php echo $event->Description?></td>
+                        <td>03 Aug 2017</td>
+                        <td><button class="btn btn-success">Edit </button> <button class="btn btn-danger">Delete</button></td>
+                      </tr>
+                    <?php endforeach; ?>
 
                    
 
