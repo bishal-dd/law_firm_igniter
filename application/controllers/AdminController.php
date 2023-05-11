@@ -10,8 +10,8 @@ class AdminController extends CI_Controller {
 		$this->load->view('admin/dashboard');
 	}
 	
-	function add_slider(){
-		$this->load->view("admin/pages/homeslider");
+	function add_events(){
+		$this->load->view("admin/pages/addevents");
 	}
 
 }

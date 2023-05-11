@@ -20,7 +20,7 @@
       </li>
 
       <li>
-        <a href="<?php echo site_url('admincontroller/add_slider'); ?>">
+        <a href="<?php echo site_url('admincontroller/add_events'); ?>">
           <i class="zmdi zmdi-format-list-bulleted"></i> <span>Add Event</span>
         </a>
       </li>
