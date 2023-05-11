@@ -12,7 +12,7 @@
            <div class="card-body">
            <div class="card-title">Add Event</div>
            <hr>
-            <form action="<?php echo site_url('admincontroller/add_events'); ?>" method="post">
+            <form action="<?php echo site_url('admincontroller/add_events'); ?>" method="post" enctype="multipart/form-data">
            <div class="form-group">
             <label for="input-1">Name</label>
             <input type="text" class="form-control" id="input-1" placeholder="Enter Your Name" value="<?= set_value('name') ?>" name="name">
@@ -103,16 +103,5 @@
   </div><!--End wrapper-->
 
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/popper.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-	
- <!-- simplebar js -->
-  <script src="assets/plugins/simplebar/js/simplebar.js"></script>
-  <!-- sidebar-menu js -->
-  <script src="assets/js/sidebar-menu.js"></script>
-  
-  <!-- Custom scripts -->
-  <script src="assets/js/app-script.js"></script>
+
 	

@@ -11,10 +11,30 @@ class AdminController extends CI_Controller {
 	
 	function add_events(){
 
-		$data = array('Name' => $this->input->post('name'),
-						'Description' => $this->input->post('description'));
+		$image = $_FILES['image']['name'];
+		
 
-		$this->events_model->add_events_model($data);
+		$file_directory = "uploads/events/";
+        if(!is_dir($file_directory)){
+            mkdir($file_directory,0777,TRUE);
+        }
+		if($image != ""){
+			move_uploaded_file($_FILES["image"]["tmp_name"], $file_directory . $image);
+		}
+	
+
+		$data = array('Name' => $this->input->post('name'),
+		'Description' => $this->input->post('description'),
+			'Image' => $file_directory . $image);
+
+	
+
+		$this->common_model->add_events_model($data);
+		redirect('admincontroller/load_add_events');
+
+	}
+
+	function add_slider(){
 
 	}
 

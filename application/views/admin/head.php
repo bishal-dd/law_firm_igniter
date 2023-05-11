@@ -25,5 +25,17 @@
   <link href="<?php echo base_url();?>assets/admin/css/sidebar-menu.css" rel="stylesheet"/>
   <!-- Custom Style-->
   <link href="<?php echo base_url();?>assets/admin/css/app-style.css" rel="stylesheet"/>
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?php echo base_url();?>assets/admin/js/jquery.min.js"></script>
+  <script src="<?php echo base_url();?>assets/admin/js/popper.min.js"></script>
+  <script src="<?php echo base_url();?>assets/admin/js/bootstrap.min.js"></script>
+	
+ <!-- simplebar js -->
+  <script src="<?php echo base_url();?>assets/admin/plugins/simplebar/js/simplebar.js"></script>
+  <!-- sidebar-menu js -->
+  <script src="<?php echo base_url();?>assets/admin/js/sidebar-menu.js"></script>
+  
+  <!-- Custom scripts -->
+  <script src="<?php echo base_url();?>assets/admin/js/app-script.js"></script>
   
 </head>
