@@ -20,10 +20,9 @@
     </div>
 
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
-      <div class="carousel-item active" style="background-image: url(https://res.cloudinary.com/dnmtsuwhc/image/upload/v1681099614/WhatsApp_Image_2023-04-10_at_9.46.12_AM_mdcuuq.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(https://res.cloudinary.com/dnmtsuwhc/image/upload/v1681099593/WhatsApp_Image_2023-04-10_at_9.46.12_AM_1_jfkyl1.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(https://res.cloudinary.com/dnmtsuwhc/image/upload/v1681099516/WhatsApp_Image_2023-04-10_at_9.46.11_AM_zaw152.jpg)"></div>
+      <?php foreach($slider as $i=>$image):?>
+      <div class="carousel-item active" style="background-image: url(<?php echo base_url();?>/<?php echo $image->Image;?>)"></div>
+      <?php endforeach; ?>
      
 
       <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">

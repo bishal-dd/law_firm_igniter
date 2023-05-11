@@ -35,6 +35,26 @@
           </form>
          </div>
          </div>
+
+         <!-- Slider -->
+         <div class="card">
+           <div class="card-body">
+           <div class="card-title">Add Slider Image</div>
+           <hr>
+            <form action="<?php echo site_url('admincontroller/add_slider'); ?>" method="post" enctype="multipart/form-data">
+          
+           <div class="form-group">
+            <label for="input-2">Image</label>
+            <input type="file" class="form-control" id="input-2" placeholder="Choose your Image" name="image" vlaue="<?= set_value('image')?>"required>
+           </div>
+          
+           </div>
+           <div class="form-group text-center">
+            <button type="submit" class="btn btn-light px-5"><i class="icon-lock"></i> Add</button>
+          </div>
+          </form>
+         </div>
+         </div>
       </div>
       
 

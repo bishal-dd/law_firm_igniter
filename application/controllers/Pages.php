@@ -5,10 +5,10 @@ class Pages extends CI_Controller {
 
 	public function index()
 	{
-		
+		$data['slider'] = $this->common_model->get_slider_image();
 
 	
-		$this->load->view('pages/index');
+		$this->load->view('pages/index', $data);
 	}
 	
 	function login(){

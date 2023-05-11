@@ -13,10 +13,18 @@ class Common_model extends CI_Model {
         $this->db->insert('t_slider', $data);
     }
     function get_events(){
-        
+
         $query = $this->db->get('t_events');
 
         return $query->result();
+    }
+
+    function get_slider_image(){
+
+        $query = $this->db->get('t_slider');
+
+        return $query->result();
+
     }
 }
 
