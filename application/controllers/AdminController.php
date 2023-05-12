@@ -8,7 +8,7 @@ class AdminController extends CI_Controller {
 	{
 	
 
-		$data['events'] = $this->common_model->get_events();
+		$data['events'] = $this->Common_model->get_events();
 
 		$this->load->view('admin/dashboard', $data);
 	}
@@ -35,7 +35,7 @@ class AdminController extends CI_Controller {
 
 	
 
-		$this->common_model->add_events_model($data);
+		$this->Common_model->add_events_model($data);
 		redirect('AdminController/load_add_events');
 
 	}
@@ -58,9 +58,14 @@ class AdminController extends CI_Controller {
 			'Image' => $file_directory . $image,
 				'Date'=> $current_date);
 
-		$this->common_model->add_silder_image($data);
+		$this->Common_model->add_silder_image($data);
 		redirect('AdminController/load_add_events');
 
+	}
+	function delete_event($id){
+
+		$this->Common_model->delete_event($id);
+		redirect("AdminController/index");
 	}
 
 	function load_add_events(){
@@ -68,5 +73,6 @@ class AdminController extends CI_Controller {
 		$this->load->view("admin/pages/addevents");
 	}
 
+	
 	
 }

@@ -10,7 +10,7 @@ class LoginController extends CI_Controller {
         $email = $this->input->post('email');
         $password = $this->input->post('password');
        
-        $user_id = $this->common_model->get_users($email, $password);
+        $user_id = $this->Common_model->get_users($email, $password);
 
         if($user_id){
             $user_data = array(

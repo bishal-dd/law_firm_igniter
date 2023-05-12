@@ -42,7 +42,7 @@
                         <td><img src="<?php echo base_url();?>/<?php echo $event->Image;?>" class="product-img" alt="product img" style="width:100%; height:auto"></td>
                         <td><?php echo $event->Description?></td>
                         <td><?php echo $event->Date?></td>
-                        <td><button class="btn btn-success">Edit </button> <button class="btn btn-danger">Delete</button></td>
+                        <td><button class="btn btn-success">Edit </button> <a href="<?php echo site_url('AdminController/delete_event/'.$event->Id) ?>" class="btn btn-danger">Delete</a></td>
                       </tr>
                     <?php endforeach; ?>
 
