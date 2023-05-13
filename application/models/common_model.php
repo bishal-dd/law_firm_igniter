@@ -69,6 +69,13 @@ class Common_model extends CI_Model {
         $this->db->where('Id', $id);
         $this->db->update('t_events', $data);
     }
+
+    function get_event_deatils($id){
+
+        $this->db->where('Id', $id);
+        $query = $this->db->get('t_events');
+        return $query->result();
+    }
 }
 
 

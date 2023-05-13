@@ -11,10 +11,10 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar fixed">
         <ul>
-          <li><a href="<?php echo site_url('pages/index'); ?>" class="active">Home</a></li>
-          <li><a href="<?php echo site_url('pages/about'); ?>">About</a></li>
-          <li><a href="<?php echo site_url('pages/event'); ?>">Events</a></li>
-          <li><a href="<?php echo site_url('pages/login'); ?>">Login</a></li>
+          <li><a href="<?php echo site_url('Pages/index'); ?>" class="active">Home</a></li>
+          <li><a href="<?php echo site_url('Pages/about'); ?>">About</a></li>
+          <li><a href="<?php echo site_url('Pages/event'); ?>">Events</a></li>
+          <li><a href="<?php echo site_url('Pages/login'); ?>">Login</a></li>
        
         </ul>
       </nav><!-- .navbar -->

@@ -22,6 +22,13 @@ class Pages extends CI_Controller {
    
     }
 
+	function event_detail($id){
+
+		$result['event'] = $this->Common_model->get_event_deatils($id);
+		$result['events'] = $this->Common_model->get_events();
+		$this->load->view("pages/event_detail", $result);
+	}
+
  	function event(){
 		$data['events'] = $this->Common_model->get_events();
 

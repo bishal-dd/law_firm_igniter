@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <title>Dashtreme Admin - Free Dashboard for Bootstrap 4 by Codervent</title>
+  <title>Mee Pham Drimed Law</title>
   <!-- loader-->
   <link href="<?php echo base_url();?>assets/admin/css/pace.min.css" rel="stylesheet"/>
   <script src="<?php echo base_url();?>assets/js/pace.min.js"></script>
   <!--favicon-->
-  <link rel="icon" href="<?php echo base_url();?>assets/admin/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?php echo base_url();?>assets/logo.jpg" type="image/x-icon">
   <!-- Vector CSS -->
   <link href="<?php echo base_url();?>assets/admin/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
   <!-- simplebar CSS-->

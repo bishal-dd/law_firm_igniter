@@ -7,8 +7,8 @@
    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
      <div class="brand-logo">
       <a href="index.html">
-       <img src="<?php echo base_url();?>assets/admin/images/logo-icon.png" class="logo-icon" alt="logo icon">
-       <h5 class="logo-text">Dashtreme Admin</h5>
+       <img src="<?php echo base_url();?>assets/logo.jpg" class="logo-icon" alt="logo icon">
+       <h5 class="logo-text">Mee Pham Drimed Law</h5>
      </a>
    </div>
    <ul class="sidebar-menu do-nicescrol">
@@ -21,12 +21,12 @@
 
       <li>
         <a href="<?php echo site_url('AdminController/load_add_events'); ?>">
-          <i class="zmdi zmdi-format-list-bulleted"></i> <span>Add Event</span>
+          <i class="zmdi zmdi-format-list-bulleted"></i> <span>Add Events and Image</span>
         </a>
       </li>
       <li>
         <a href="<?php echo site_url('AdminController/load_silder_images'); ?>">
-          <i class="zmdi zmdi-format-list-bulleted"></i> <span>Slider Images</span>
+          <i class="zmdi zmdi-book-image"></i> <span>Slider Images</span>
         </a>
       </li>
 
