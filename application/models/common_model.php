@@ -47,8 +47,27 @@ class Common_model extends CI_Model {
 
     function delete_event($id){
 
-         $this->db->where('id', $id);
+         $this->db->where('Id', $id);
          $this->db->delete('t_events');
+    }
+
+    function delete_slider($id){
+
+        $this->db->where('Id', $id);
+        $this->db->delete('t_slider');
+   }
+
+    function edit_page_event($id){
+
+        $this->db->where('Id', $id);
+        $query = $this->db->get('t_events');
+        return $query->result();
+
+    }
+
+    function edit_events($id, $data){
+        $this->db->where('Id', $id);
+        $this->db->update('t_events', $data);
     }
 }
 

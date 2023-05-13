@@ -42,13 +42,7 @@
 
                 <h3 class="post-title"><?php echo $event->Name?>  </h3>
 
-                <div class="meta d-flex align-items-center">
-                  <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">John Doe</span>
-                  </div>
-                  <span class="px-3 text-black-50">/sss</span>
-                  
-                </div>
+               
 
                 <p>
                 <?php echo $event->Description?>                </p>

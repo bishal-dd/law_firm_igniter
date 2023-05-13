@@ -68,11 +68,71 @@ class AdminController extends CI_Controller {
 		redirect("AdminController/index");
 	}
 
+	function delete_slider($id){
+
+		$this->Common_model->delete_slider($id);
+		redirect("AdminController/load_silder_images");
+	}
+
+	function edit_page_event($id){
+
+		$result['event'] = $this->Common_model->edit_page_event($id);
+		$this->load->view('admin/pages/editevents', $result);
+
+		
+	}
+
+	function edit_events($id){
+
+		$image = $_FILES['image']['name'];
+		
+
+		$file_directory = "uploads/events/";
+        if(!is_dir($file_directory)){
+            mkdir($file_directory,0777,TRUE);
+        }
+
+		if($image != ""){
+			move_uploaded_file($_FILES["image"]["tmp_name"], $file_directory . $image);
+			$data = array('Name' => $this->input->post('name'),
+		'Description' => $this->input->post('description'),
+			'Image' => $file_directory . $image,
+				);
+		}
+		else{
+			$data = array('Name' => $this->input->post('name'),
+		'Description' => $this->input->post('description'),
+			
+				);
+
+		}
+
+		
+
+		$this->Common_model->edit_events($id, $data);
+		redirect('AdminController/index');
+
+
+	}
+
+	
+
+	function load_edit_events(){
+
+		$this->load->view("admin/pages/editevents");
+	}
+
 	function load_add_events(){
 
 		$this->load->view("admin/pages/addevents");
 	}
 
+	function load_silder_images(){
+
+		$result['events'] = $this->Common_model->get_slider_image();
+
+		$this->load->view("admin/pages/showslider", $result);
+	}
 	
 	
 }

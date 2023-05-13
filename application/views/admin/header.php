@@ -14,28 +14,23 @@
    <ul class="sidebar-menu do-nicescrol">
       <li class="sidebar-header">MAIN NAVIGATION</li>
       <li>
-        <a href="<?php echo site_url('admincontroller/index'); ?>">
+        <a href="<?php echo site_url('AdminController/index'); ?>">
           <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
         </a>
       </li>
 
       <li>
-        <a href="<?php echo site_url('admincontroller/load_add_events'); ?>">
+        <a href="<?php echo site_url('AdminController/load_add_events'); ?>">
           <i class="zmdi zmdi-format-list-bulleted"></i> <span>Add Event</span>
         </a>
       </li>
-
-       <li>
-        <a href="register.html" target="_blank">
-          <i class="zmdi zmdi-account-circle"></i> <span>Registration</span>
+      <li>
+        <a href="<?php echo site_url('AdminController/load_silder_images'); ?>">
+          <i class="zmdi zmdi-format-list-bulleted"></i> <span>Slider Images</span>
         </a>
       </li>
 
-      <li class="sidebar-header">LABELS</li>
-      <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
-      <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>
-      <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>
-
+       
     </ul>
    
    </div>

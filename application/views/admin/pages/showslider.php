@@ -14,7 +14,7 @@
 	<div class="row">
 	 <div class="col-12 col-lg-12">
 	   <div class="card">
-	     <div class="card-header">Events
+	     <div class="card-header">Slider
 		  <div class="card-action">
              <div class="dropdown">
              <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
@@ -28,9 +28,8 @@
                  <table class="table align-items-center table-flush table-borderless">
                   <thead>
                    <tr>
-                     <th>Name</th>
+                     <th>Sl. No</th>
                      <th>Photo</th>
-                     <th>Description</th>
                      <th>Date</th>
                      <th>Actions</th>
                    </tr>
@@ -38,11 +37,10 @@
                    <tbody>
                    <?php foreach(array_reverse($events) as $i=>$event): ?>
                       <tr>
-                        <td><?php echo $event->Name;?></td>
-                        <td><img src="<?php echo base_url();?>/<?php echo $event->Image;?>" class="product-img" alt="product img" style="width:100%; height:auto"></td>
-                        <td><?php echo $event->Description?></td>
+                        <td><?php echo $i+1;?></td>
+                        <td><img src="<?php echo base_url();?>/<?php echo $event->Image;?>" class="product-img" alt="product img" style="width:500px; height:400px"></td>
                         <td><?php echo $event->Date?></td>
-                        <td><a href="<?php echo site_url('AdminController/edit_page_event/'.$event->Id) ?>" class="btn btn-success">Edit </a> <a href="<?php echo site_url('AdminController/delete_event/'.$event->Id) ?>" class="btn btn-danger">Delete</a></td>
+                        <td><a href="<?php echo site_url('AdminController/delete_slider/'.$event->Id) ?>" class="btn btn-danger">Delete</a></td>
                       </tr>
                     <?php endforeach; ?>
 
