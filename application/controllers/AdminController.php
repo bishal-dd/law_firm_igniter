@@ -6,6 +6,10 @@ class AdminController extends CI_Controller {
 	
 	public function index()
 	{
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
+		
 	
 
 		$data['events'] = $this->Common_model->get_events();
@@ -14,6 +18,10 @@ class AdminController extends CI_Controller {
 	}
 	
 	function add_events(){
+
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
 
 		$image = $_FILES['image']['name'];
 		
@@ -42,6 +50,10 @@ class AdminController extends CI_Controller {
 
 	function add_slider(){
 
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
+
 		$image = $_FILES['image']['name'];
 		
 
@@ -64,17 +76,29 @@ class AdminController extends CI_Controller {
 	}
 	function delete_event($id){
 
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
+
 		$this->Common_model->delete_event($id);
 		redirect("AdminController/index");
 	}
 
 	function delete_slider($id){
 
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
+
 		$this->Common_model->delete_slider($id);
 		redirect("AdminController/load_silder_images");
 	}
 
 	function edit_page_event($id){
+
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
 
 		$result['event'] = $this->Common_model->edit_page_event($id);
 		$this->load->view('admin/pages/editevents', $result);
@@ -83,6 +107,10 @@ class AdminController extends CI_Controller {
 	}
 
 	function edit_events($id){
+
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
 
 		$image = $_FILES['image']['name'];
 		
@@ -119,15 +147,27 @@ class AdminController extends CI_Controller {
 
 	function load_edit_events(){
 
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
+
 		$this->load->view("admin/pages/editevents");
 	}
 
 	function load_add_events(){
 
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
+
 		$this->load->view("admin/pages/addevents");
 	}
 
 	function load_silder_images(){
+
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
 
 		$result['events'] = $this->Common_model->get_slider_image();
 

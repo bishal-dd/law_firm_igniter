@@ -16,17 +16,27 @@ class LoginController extends CI_Controller {
             $user_data = array(
                 'user_id'=> $user_id,
                 'email'=>$email,
-                'logged_in'=>$true
+                'logged_in'=>true
             );
+       
         
             $this->session->set_userdata($user_data);
+            session_write_close();
             redirect('AdminController/index');
+         
+        }
+        else{
+
+            $data['error'] = "Wrong Email or Password"; 
+            $this->load->view("pages/login", $data);
         }
     }
 
     function logout(){
-        $this->session->unset_userdata(0);
+        
         $this->session->sess_destroy();
         redirect('Pages/index', 'refresh');
     }
+    
+    
 }

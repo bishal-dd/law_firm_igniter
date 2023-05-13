@@ -26,6 +26,9 @@
             
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
+              <?php if(isset($error)): ?>
+                   <p style="background-color:red" class="p-2 rounded-3"><?php echo $error; ?></p>
+              <?php endif; ?>
              
                 <form method="post" action="<?php echo site_url('LoginController/login'); ?>" enctype="multipart/form-data">
 
@@ -36,7 +39,7 @@
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
                   <div class="form-outline mb-4">
-                    <input type="email" name="email"  id="email" class="form-control form-control-lg"value="<?= set_value('name') ?>" required/>
+                    <input type="email" name="email"  id="email" class="form-control form-control-lg" value="<?= set_value('email') ?>" required/>
                     <label class="form-label" for="form2Example17">Email address</label>
                   </div>
 
