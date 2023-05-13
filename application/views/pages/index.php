@@ -59,13 +59,13 @@
 
               <ul>
 
-              <li>   <h4><a href="" class="stretched-link " style="color:black">Intellectual Property Rights</a></h4></li>
-              <li>  <h4><a href="" class="stretched-link" style="color:black">Contract Act</a></h4></li>
-              <li> <h4><a href="" class="stretched-link" style="color:black">FinTech</a></h4></li>
-              <li><h4><a href="" class="stretched-link" style="color:black">Securities Exchange</a></h4></li>
-              <li><h4><a href="" class="stretched-link" style="color:black">Bankruptcy</a></h4></li>
-              <li><h4><a href="" class="stretched-link" style="color:black">Foreign Direct Investment (FDI)</a></h4></li>
-              <li> <h4><a href="" class="stretched-link" style="color:black">Banking Laws</a></h4></li>
+              <li>   <h4><a href="" class="stretched-link " style="color:grey">Intellectual Property Rights</a></h4></li>
+              <li>  <h4><a href="" class="stretched-link" style="color:grey">Contract Act</a></h4></li>
+              <li> <h4><a href="" class="stretched-link" style="color:grey">FinTech</a></h4></li>
+              <li><h4><a href="" class="stretched-link" style="color:grey">Securities Exchange</a></h4></li>
+              <li><h4><a href="" class="stretched-link" style="color:grey">Bankruptcy</a></h4></li>
+              <li><h4><a href="" class="stretched-link" style="color:grey">Foreign Direct Investment (FDI)</a></h4></li>
+              <li> <h4><a href="" class="stretched-link" style="color:grey">Banking Laws</a></h4></li>
               </ul>
               
              
