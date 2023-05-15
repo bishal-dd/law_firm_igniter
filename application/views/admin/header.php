@@ -66,7 +66,7 @@
           </a>
         </li>
         
-        <li class="dropdown-item"><a href="<?php echo site_url('logincontroller/logout'); ?>"><i class="icon-power mr-2"></i>Logout</a></li>
+        <li class="dropdown-item"><a href="<?php echo site_url('LoginController/logout'); ?>"><i class="icon-power mr-2"></i>Logout</a></li>
       </ul>
     </li>
   </ul>
