@@ -163,6 +163,15 @@ class AdminController extends CI_Controller {
 		$this->load->view("admin/pages/addevents");
 	}
 
+	function load_add_admin(){
+
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
+
+		$this->load->view("admin/pages/adduser");
+	}
+
 	function load_silder_images(){
 
 		if(!$this->session->userdata('logged_in')){

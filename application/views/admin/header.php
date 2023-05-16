@@ -29,6 +29,11 @@
           <i class="zmdi zmdi-book-image"></i> <span>Slider Images</span>
         </a>
       </li>
+      <li>
+        <a href="<?php echo site_url('AdminController/load_add_admin'); ?>">
+          <i class="zmdi zmdi-book-image"></i> <span>Add user</span>
+        </a>
+      </li>
 
        
     </ul>
