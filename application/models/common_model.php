@@ -9,6 +9,10 @@ class Common_model extends CI_Model {
     
     }
 
+    function add_admin_model($data){
+        $this->db->insert('t_user', $data);
+    }
+
     function add_silder_image($data){
         $this->db->insert('t_slider', $data);
     }
@@ -22,6 +26,14 @@ class Common_model extends CI_Model {
     function get_slider_image(){
 
         $query = $this->db->get('t_slider');
+
+        return $query->result();
+
+    }
+
+    function get_admin(){
+
+        $query = $this->db->get('t_user');
 
         return $query->result();
 
@@ -44,11 +56,22 @@ class Common_model extends CI_Model {
        
 
     }
+    function get_edit_user($id){
+
+        $this->db->where('Id', $id);
+        $query = $this->db->get('t_user');
+        return $query->result();
+
+    }
 
     function delete_event($id){
 
          $this->db->where('Id', $id);
          $this->db->delete('t_events');
+    }
+    function delete_user($id){
+        $this->db->where('Id', $id);
+        $this->db->delete('t_user');
     }
 
     function delete_slider($id){
@@ -68,6 +91,11 @@ class Common_model extends CI_Model {
     function edit_events($id, $data){
         $this->db->where('Id', $id);
         $this->db->update('t_events', $data);
+    }
+
+    function edit_user($id, $data){
+        $this->db->where('Id', $id);
+        $this->db->update('t_user', $data);
     }
 
     function get_event_deatils($id){

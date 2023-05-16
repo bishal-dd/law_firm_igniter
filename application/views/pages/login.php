@@ -44,7 +44,7 @@
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="password"  name="password"  class="form-control form-control-lg" value=" <?= set_value('password')?>"required />
+                    <input type="password" id="password"  name="password"  class="form-control form-control-lg" value="<?= set_value('password')?>"required />
                     <label class="form-label" for="form2Example27">Password</label>
                   </div>
 

@@ -74,6 +74,28 @@ class AdminController extends CI_Controller {
 		redirect('AdminController/load_add_events');
 
 	}
+
+	function add_admin(){
+
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
+
+		$current_date = date('Y-m-d'); // generates a string representing the current date in the format YYYY-MM-DD
+
+		$data = array('Name' => $this->input->post('name'),
+		'Email' => $this->input->post('email'),
+		'Phone' => $this->input->post('phone'),
+		'Password' => hash('sha256', 'Admin@1234')
+			);
+
+	
+
+		$this->Common_model->add_admin_model($data);
+		redirect('AdminController/load_add_admin');
+
+	}
+
 	function delete_event($id){
 
 		if(!$this->session->userdata('logged_in')){
@@ -92,6 +114,16 @@ class AdminController extends CI_Controller {
 
 		$this->Common_model->delete_slider($id);
 		redirect("AdminController/load_silder_images");
+	}
+
+	function delete_user($id){
+
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
+
+		$this->Common_model->delete_user($id);
+		redirect("AdminController/load_add_admin");
 	}
 
 	function edit_page_event($id){
@@ -143,16 +175,41 @@ class AdminController extends CI_Controller {
 
 	}
 
+	function edit_admin($id){
+		if(!$this->session->userdata('logged_in')){
+			redirect('Pages/login');
+		}
+
+		
+		
+			$data = array('Name' => $this->input->post('name'),
+						  'Email' => $this->input->post('email'),
+						   'Phone' => $this->input->post('phone')
+						  );
+
 	
 
-	function load_edit_events(){
+		
+
+		$this->Common_model->edit_user($id, $data);
+		redirect('AdminController/load_add_admin');
+	}
+
+	
+
+	
+
+	function load_edit_users($id){
 
 		if(!$this->session->userdata('logged_in')){
 			redirect('Pages/login');
 		}
 
-		$this->load->view("admin/pages/editevents");
+		$result['users'] = $this->Common_model->get_edit_user($id);
+		$this->load->view("admin/pages/edituser", $result);
 	}
+
+
 
 	function load_add_events(){
 
@@ -169,7 +226,10 @@ class AdminController extends CI_Controller {
 			redirect('Pages/login');
 		}
 
-		$this->load->view("admin/pages/adduser");
+		$result['users'] = $this->Common_model->get_admin();
+
+
+		$this->load->view("admin/pages/adduser", $result);
 	}
 
 	function load_silder_images(){
@@ -182,6 +242,5 @@ class AdminController extends CI_Controller {
 
 		$this->load->view("admin/pages/showslider", $result);
 	}
-	
-	
+
 }

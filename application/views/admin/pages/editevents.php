@@ -21,7 +21,7 @@
            <div class="form-group">
             <label for="input-2">Image</label><br>
             <img src="<?php echo base_url();?>/<?php echo $row->Image ?>" width="60" height="50">
-            <input type="file" class="form-control" id="input-2" placeholder="Choose your Image" name="image" vlaue="<?php echo $row->Image?> <?= set_value('image')?>">
+            <input type="file" class="form-control" id="input-2" placeholder="Choose your Image" name="image" value="<?php echo $row->Image?> <?= set_value('image')?>">
            </div>
            
           

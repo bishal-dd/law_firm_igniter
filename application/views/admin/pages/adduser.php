@@ -20,7 +20,7 @@
     <div class="row">
       <div class="col-12 col-lg-12">
         <div class="card">
-          <div class="card-header">Slider
+          <div class="card-header">Users
             <div class="card-action">
               <div class="dropdown">
                 <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
@@ -40,15 +40,17 @@
                 </tr>
               </thead>
               <tbody>
+                <?php foreach($users as $user):?>
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td><?php echo $user->Name; ?> </td>
+                  <td><?php echo $user->Email; ?></td>
+                  <td><?php echo $user->Phone; ?></td>
                   <td>
-                    <a href="#" class="btn btn-success">Edit</a>
-                    <a href="#" class="btn btn-danger">Delete</a>
+                  <a href="<?php echo site_url('AdminController/load_edit_users/'.$user->Id) ?>" class="btn btn-success">Edit </a>
+                  <a href="<?php echo site_url('AdminController/delete_user/'.$user->Id) ?>" class="btn btn-danger">Delete</a>
                   </td>
                 </tr>
+                <?php endforeach; ?>
               </tbody>
             </table>
           </div>
@@ -70,25 +72,26 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="<?php echo site_url('AdminController/add_admin'); ?>" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label for="exampleInputName">Name</label>
-            <input type="text" id="exampleInputName" class="form-control" placeholder="Enter Your Name">
+            <input type="text" id="exampleInputName" class="form-control" placeholder="Enter Your Name" name="name" id="name" vlaue="<?= set_value('name')?>">
           </div>
           <div class="form-group">
             <label for="exampleInputEmailId">Email ID</label>
-            <input type="text" id="exampleInputEmailId" class="form-control" placeholder="Enter Your Email ID">
+            <input type="text" id="exampleInputEmailId" class="form-control" placeholder="Enter Your Email ID" name="email" id="email" vlaue="<?= set_value('email')?>">
           </div>
           <div class="form-group">
             <label for="exampleInputPhone">Phone number</label>
-            <input type="text" id="exampleInputPhone" class="form-control" placeholder="Insert phone number">
+            <input type="tel" id="exampleInputPhone" class="form-control" placeholder="Insert phone number" name="phone" id="phone" vlaue="<?= set_value('phone')?>">
           </div>
-        </form>
+      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Add</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
