@@ -102,8 +102,21 @@ class AdminController extends CI_Controller {
 			redirect('Pages/login');
 		}
 
+		$event = $this->Common_model->edit_page_event($id);
+		$image_path = $event->Image;
+	
+
+		echo $image_path;
+
+		// Delete the image files from the /uploads/events folder
+		
+		    $path = $image_path;
+			unlink($path);
+
 		$this->Common_model->delete_event($id);
-		redirect("AdminController/index");
+		redirect('AdminController/index');
+		
+		
 	}
 
 	function delete_slider($id){
@@ -122,6 +135,9 @@ class AdminController extends CI_Controller {
 			redirect('Pages/login');
 		}
 
+	
+	
+
 		$this->Common_model->delete_user($id);
 		redirect("AdminController/load_add_admin");
 	}
@@ -132,8 +148,8 @@ class AdminController extends CI_Controller {
 			redirect('Pages/login');
 		}
 
-		$result['event'] = $this->Common_model->edit_page_event($id);
-		$this->load->view('admin/pages/editevents', $result);
+		$row = $this->Common_model->edit_page_event($id);
+		$this->load->view('admin/pages/editevents', ['event' => $row]);
 
 		
 	}

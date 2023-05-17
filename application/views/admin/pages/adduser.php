@@ -54,6 +54,7 @@
               </tbody>
             </table>
           </div>
+          <b>The default Password is 'Admin@1234'</b>
         </div>
       </div>
     </div><!--End Row-->

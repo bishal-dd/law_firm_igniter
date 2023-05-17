@@ -11,23 +11,23 @@
          <div class="card">
            <div class="card-body">
            <div class="card-title">Edit Event</div>
-           <?php $row = $event[0]; ?>
+           
            <hr>
-            <form action="<?php echo site_url('AdminController/edit_events/'.$row->Id); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?php echo site_url('AdminController/edit_events/'.$event->Id); ?>" method="post" enctype="multipart/form-data">
            <div class="form-group">
             <label for="input-1">Name</label>
-            <input type="text" class="form-control" id="input-1" placeholder="<?php echo $row->Name?>" value="<?php echo $row->Name?> <?= set_value('name') ?>" name="name"  required>
+            <input type="text" class="form-control" id="input-1" placeholder="<?php echo $event->Name?>" value="<?php echo $event->Name?> <?= set_value('name') ?>" name="name"  required>
            </div>
            <div class="form-group">
             <label for="input-2">Image</label><br>
-            <img src="<?php echo base_url();?>/<?php echo $row->Image ?>" width="60" height="50">
-            <input type="file" class="form-control" id="input-2" placeholder="Choose your Image" name="image" value="<?php echo $row->Image?> <?= set_value('image')?>">
+            <img src="<?php echo base_url();?>/<?php echo $event->Image ?>" width="60" height="50">
+            <input type="file" class="form-control" id="input-2" placeholder="Choose your Image" name="image" value="<?php echo $event->Image?> <?= set_value('image')?>">
            </div>
            
           
            <div class="form-group">
             <label for="input-5">Description</label><br>
-            <textarea cols="50" rows="5" name="description" value="<?= set_value('description')?>"  required><?php echo $row->Description?></textarea>
+            <textarea cols="50" rows="5" name="description" value="<?= set_value('description')?>"  required><?php echo $event->Description?></textarea>
            </div>
           
            </div>

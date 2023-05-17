@@ -39,7 +39,7 @@
                    <?php foreach(array_reverse($events) as $i=>$event): ?>
                       <tr>
                         <td><?php echo $event->Name;?></td>
-                        <td><img src="<?php echo base_url();?>/<?php echo $event->Image;?>" class="product-img" alt="product img" style="width:100%; height:auto"></td>
+                        <td><img src="<?php echo base_url();?>/<?php echo $event->Image;?>" class="product-img" alt="product img" style="width:100%; height:400px"></td>
                         <td><?php echo $event->Description?></td>
                         <td><?php echo $event->Date?></td>
                         <td><a href="<?php echo site_url('AdminController/edit_page_event/'.$event->Id) ?>" class="btn btn-success">Edit </a> <a href="<?php echo site_url('AdminController/delete_event/'.$event->Id) ?>" class="btn btn-danger">Delete</a></td>
